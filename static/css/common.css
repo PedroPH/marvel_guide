@@ -1,0 +1,66 @@
+/*
+	------- NAV BAR -------
+*/
+.nav_css {
+	background: radial-gradient(#0000FF, #00AEFF);
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.nav_item_style {
+	font-size: 20px;
+	text-shadow: 0 0 5px black;
+}
+
+.nav_item_search_text {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.nav_item_search_button {
+	background-color: rgba(255, 255, 255, 0.4);
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.nav_dropdown {
+	background-color: #EAF1FF;
+}
+
+.nav_item_cat_div {
+	margin-top: 8px;
+}
+
+.nav_item_cat {
+	background-color: rgba(0, 0, 0, 0);
+	border: 0px;
+}
+
+/*
+	------- BORDERS -------
+*/
+.border_radius {
+	border-radius: 25px;
+}
+
+.border_radius_top {
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+}
+
+.border_radius_bottom {
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+/*
+	------- FOOTER -------
+*/
+.footer {
+	padding: 0px 200px 0px 200px;
+	text-align: center;
+}
+
+.footer_h1 {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 18px;
+}

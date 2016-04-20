@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.KeyError'> 'deascription'"
+p3
+sS'layer'
+p4
+S'/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py'
+p5
+sS'code'
+p6
+S'from serializers import json\nimport json as json2\nimport sys\nreload(sys)\nsys.setdefaultencoding("utf-8")\n\ndef insert_hq():\n    insert = request.vars.insert\n    data = {\'title\' : request.vars.hq_title,\n            \'description\' : request.vars.hq_description,\n            \'year\' : request.vars.hq_year,\n            \'characters\' : json2.loads(request.vars.hq_character)}\n    if insert == \'true\':\n        query = """INSERT INTO hq (created, hq_title, hq_description, hq_year, deleted)\n                    VALUES (\'{0}\', \'{1}\', \'{2}\', \'{3}\', \'F\') RETURNING id""".format(request.now, data[\'title\'], data[\'description\'], data[\'year\'])\n    else:\n        item_edit = request.vars.item_edit\n        query = """UPDATE hq SET (hq_title=\'{0}\', hq_description,=\'{1}\' hq_year=\'{2}\') WHERE id={3} RETURNING id""".format(data[\'title\'],\n                                                                                                                          data[\'deascription\'],\n                                                                                                                          data[\'year\'],\n                                                                                                                          item_edit)\n    try:\n        id_hq = db.executesql(query,as_dict=True)\n        id_hq = id_hq[0][\'id\']\n        if insert == \'true\':\n            for c in data[\'characters\']:\n                db.executesql("""INSERT INTO hq_character (created, marvel_character, hq, deleted)\n                                    VALUES (\'{0}\', {1}, {2}, \'F\')""".format(request.now, c, id_hq))\n        else:\n            aux = \'\'\n            for c in data[\'characters\']:\n                aux += c + \',\'\n                if len(db.executesql("""SELECT id FROM hq_character \n                                        WHERE hq={0} AND marvel_character={1}""".format(id_hq, c),as_dict=True)) == 0:\n                    db.executesql("""INSERT INTO hq_character (created, marvel_character, hq, deleted)\n                                    VALUES (\'{0}\', {1}, {2}, \'F\')""".format(request.now, c, id_hq))\n            aux = aux[0:-1]\n            db.executesql("UPDATE hq_character SET (deleted=\'T\') WHERE hq={0} AND marvel_character NOT IN (\'{1}\')".format(id_hq, aux))\n                \n                    \n        ret = {\'hqs\' : db.executesql("SELECT id, hq_title, hq_description, hq_year FROM hq WHERE deleted=\'F\'".format(id_hq),as_dict=True),\n               \'hqs_characters\' : db.executesql("SELECT id, marvel_character, hq FROM hq_character WHERE deleted=\'F\'",as_dict=True)}\n        db.commit()\n    except Exception as wE:\n        db.rollback()\n        ret = \'erro\'\n            \n    return XML(json(ret))\nresponse._vars=response._caller(insert_hq)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pedro/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py", line 49, in <module>\n  File "/home/pedro/web2py/gluon/globals.py", line 412, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py", line 19, in insert_hq\n    data[\'deascription\'],\nKeyError: \'deascription\'\n'
+p11
+s.

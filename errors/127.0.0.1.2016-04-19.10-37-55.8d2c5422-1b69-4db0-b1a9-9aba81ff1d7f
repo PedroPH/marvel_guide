@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.NameError'> global name 'json' is not defined"
+p3
+sS'layer'
+p4
+S'/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py'
+p5
+sS'code'
+p6
+S'def insert_hq():\n    data = [request.vars.hq_title,\n            request.vars.hq_description,\n            request.vars.hq_year]\n    query = """INSERT INTO hq (created, hq_title, hq_description, hq_year)\n                VALUES (\'{0}\', \'{1}\', \'{2}\', \'{3}\') RETURNING id""".format(request.now, data[0], data[1], data[2])\n    try:\n        id_hq = db.executesql(query);\n        ret = db.executesql(\'SELECT hq_title FROM hq\',as_dict=True)\n        db.commit()\n    except Exception as wE:\n        ret = \'erro\'\n    return XML(json(ret))\nresponse._vars=response._caller(insert_hq)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pedro/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py", line 14, in <module>\n  File "/home/pedro/web2py/gluon/globals.py", line 412, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py", line 13, in insert_hq\n    return XML(json(ret))\nNameError: global name \'json\' is not defined\n'
+p11
+s.

@@ -1,0 +1,219 @@
+(dp1
+S'output'
+p2
+S'Unable to open included view file: /home/pedro/web2py/applications/marvel_guide/views/application/menu.html'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8">\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">\n    <meta name="viewport" content="width=device-width, initial-scale=1">\n\n    <title>MARVEL Guide</title>\n\n    <meta name="description" content="Source code generated using layoutit.com">\n    <meta name="author" content="LayoutIt!">\n\n\n    <script src="static/js/jquery.min.js"></script>\n    <script src="static/js/bootstrap.min.js"></script>\n    <script src="static/js/index.js"></script>\n    <script src="static/js/menu.js"></script>\n    \n    <link href="static/css/bootstrap.min.css" rel="stylesheet">\n    <link href="static/css/common.css" rel="stylesheet">\n    <link href="static/css/news.css" rel="stylesheet">\n    <link href="static/css/index.css" rel="stylesheet">\n\n  </head>\n  <body style="background-image: url(\'static/images/back.jpg\')">\n\n    <div class="container-fluid">\n\t<div class="row">\n\t\t<div class="col-md-12" id="menu">\n\t\t\t{{include \'application/menu.html\'}}\n\t\t</div>\n\t</div>\n\t<div class="row">\n\t\t<div class="col-md-12 news_title">\n\t\t\t<img src="static/images/news.png">\n\t\t</div>\n\t</div>\n\t<div class="border_radius css_news">\n\t\t<div class="row row_news">\n\t\t\t<div class="col-md-6">\n\t\t\t\t<div class="carousel slide" id="carousel-1">\n\t\t\t\t\t<ol class="carousel-indicators">\n\t\t\t\t\t\t<li class="active" data-slide-to="0" data-target="#carousel-1">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="1" data-target="#carousel-1">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="2" data-target="#carousel-1">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ol>\n\t\t\t\t\t<div class="carousel-inner">\n\t\t\t\t\t\t<div class="item active">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap First" class="border_radius_top" alt="Carousel Bootstrap First" src="static/images/car/deadpool_0.jpg">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Second" class="border_radius_top" alt="Carousel Bootstrap Second" src="static/images/car/deadpool_1.jpg">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Third" class="border_radius_top" alt="Carousel Bootstrap Third" src="static/images/car/deadpool_2.jpg">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<a class="left carousel-control border_radius_top" href="#carousel-1" data-slide="prev">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-left"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class="right carousel-control border_radius_top" href="#carousel-1" data-slide="next">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-right"></span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t<div class="border_radius_bottom css_news_desc">\n\t\t\t\t\t<h2 style="margin-top: 0px;">Deadpool (Filme)</h2>\n\t\t\t\t\t<p>Sinopse: Ex-militar e mercen\xc3\xa1rio, Wade Wilson (Ryan Reynolds) \xc3\xa9 diagnosticado com c\xc3\xa2ncer em estado terminal, por\xc3\xa9m encontra uma possibilidade de cura em uma sinistra experi\xc3\xaancia cient\xc3\xadfica. Recuperado, com poderes e um incomum senso de humor, ele torna-se Deadpool e busca vingan\xc3\xa7a contra o homem que destruiu sua vida.</p>\n\t\t\t\t\t<a target="_blank" href="http://www.adorocinema.com/filmes/filme-146349/">Mais detalhes sobre o filme!</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class="col-md-6">\n\t\t\t\t<div class="carousel slide" id="carousel-2">\n\t\t\t\t\t<ol class="carousel-indicators">\n\t\t\t\t\t\t<li class="active" data-slide-to="0" data-target="#carousel-2">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="1" data-target="#carousel-2">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="2" data-target="#carousel-2">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ol>\n\t\t\t\t\t<div class="carousel-inner">\n\t\t\t\t\t\t<div class="item active">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap First" class="border_radius_top" src="static/images/car/free_hq_0.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Second" class="border_radius_top" src="static/images/car/free_hq_1.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Third" class="border_radius_top" src="static/images/car/free_hq_2.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div> \n\t\t\t\t\t<a class="left carousel-control border_radius_top" href="#carousel-2" data-slide="prev">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-left"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class="right carousel-control border_radius_top" href="#carousel-2" data-slide="next">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-right"></span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t<div class="border_radius_bottom css_news_desc">\n\t\t\t\t\t<h2 style="margin-top: 0px;">Hqs de GRA\xc3\x87A!</h2>\n\t\t\t\t\t<p>A editora americana Marvel disponibilizou 268 t\xc3\xadtulos de seu vasto acervo de hist\xc3\xb3rias em quadrinhos online. Uma mistura de edi\xc3\xa7\xc3\xb5es antigas e mais recentes. Entre a lista de edi\xc3\xa7\xc3\xb5es est\xc3\xa3o cl\xc3\xa1ssicos, como Capit\xc3\xa3o Am\xc3\xa9rica e Os Vingadores, e raridades - como a Amazing Fantasy #15, de 1962, e a HQ de estr\xc3\xa9ia do Homem-Aranha, cujo original custa, em m\xc3\xa9dia, duzentos mil d\xc3\xb3lares.</p>\n\t\t\t\t\t<a target="_blank" href="http://marvel.com/comics/list/623/get_started_with_free_issues?&options%5Boffset%5D=0&totalcount=33">Mais detalhes sobre as hqs!</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div class="row row_news">\n\t\t\t<div class="col-md-6">\n\t\t\t\t<div class="carousel slide" id="carousel-3">\n\t\t\t\t\t<ol class="carousel-indicators">\n\t\t\t\t\t\t<li class="active" data-slide-to="0" data-target="#carousel-3">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="1" data-target="#carousel-3">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="2" data-target="#carousel-3">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ol>\n\t\t\t\t\t<div class="carousel-inner">\n\t\t\t\t\t\t<div class="item active">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap First" class="border_radius_top" src="static/images/car/lego_avengers_0.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Second" class="border_radius_top" src="static/images/car/lego_avengers_1.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Third" class="border_radius_top" src="static/images/car/lego_avengers_2.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div> \n\t\t\t\t\t<a class="left carousel-control border_radius_top" href="#carousel-3" data-slide="prev">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-left"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class="right carousel-control border_radius_top" href="#carousel-3" data-slide="next">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-right"></span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t<div class="border_radius_bottom css_news_desc">\n\t\t\t\t\t<h2 style="margin-top: 0px;">LEGO MARVEL\'s Avengers</h2>\n\t\t\t\t\t<p>Avante Vingadores! A bem-sucedida franquia de jogos LEGO\xc2\xae Marvel volta com uma nova aventura de super-her\xc3\xb3is cheia de a\xc3\xa7\xc3\xa3o. Junte-se \xc3\xa0 equipe de LEGO\xc2\xae Marvel\'s Avengers e experimente um jogo com os personagens e hist\xc3\xb3rias dos filmes aclamados pela cr\xc3\xadtica, e mais. Jogue como os mais poderosos super-her\xc3\xb3is em sua miss\xc3\xa3o para salvar o mundo.</p>\n\t\t\t\t\t<a target="_blank" href="http://store.steampowered.com/app/405310/">Mais detalhes sobre o jogo!</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class="col-md-6">\n\t\t\t\t<div class="carousel slide" id="carousel-4">\n\t\t\t\t\t<ol class="carousel-indicators">\n\t\t\t\t\t\t<li class="active" data-slide-to="0" data-target="#carousel-4">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="1" data-target="#carousel-4">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li data-slide-to="2" data-target="#carousel-4">\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ol>\n\t\t\t\t\t<div class="carousel-inner">\n\t\t\t\t\t\t<div class="item active">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap First" class="border_radius_top" src="static/images/car/civil_war_0.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Second" class="border_radius_top" src="static/images/car/civil_war_1.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="item">\n\t\t\t\t\t\t\t<img alt="Carousel Bootstrap Third" class="border_radius_top" src="static/images/car/civil_war_2.jpg" />\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div> \n\t\t\t\t\t<a class="left carousel-control border_radius_top" href="#carousel-4" data-slide="prev">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-left"></span>\n\t\t\t\t\t</a>\n\t\t\t\t\t<a class="right carousel-control border_radius_top" href="#carousel-4" data-slide="next">\n\t\t\t\t\t\t<span class="glyphicon glyphicon-chevron-right"></span>\n\t\t\t\t\t</a>\n\t\t\t\t</div>\n\t\t\t\t<div class="border_radius_bottom css_news_desc">\n\t\t\t\t\t<h2 style="margin-top: 0px;">Capit\xc3\xa3o Am\xc3\xa9rica - Guerra Civil</h2>\n\t\t\t\t\t<p>Steve Rogers (Chris Evans) \xc3\xa9 o atual l\xc3\xadder dos Vingadores, super-grupo de her\xc3\xb3is formado por Vi\xc3\xbava Negra (Scarlett Johansson), Feiticeira Escarlate (Elizabeth Olsen), Vis\xc3\xa3o (Paul Bettany), Falc\xc3\xa3o (Anthony Mackie) e M\xc3\xa1quina de Combate (Don Cheadle). O ataque de Ultron fez com que os pol\xc3\xadticos buscassem algum meio de controlar os super-her\xc3\xb3is, j\xc3\xa1 que seus atos afetam toda a humanidade. Tal decis\xc3\xa3o coloca o Capit\xc3\xa3o Am\xc3\xa9rica em rota de colis\xc3\xa3o com Tony Stark (Robert Downey Jr.), o Homem de Ferro.</p>\n\t\t\t\t\t<a target="_blank" href="http://www.adorocinema.com/filmes/filme-215143/">Mais detalhes sobre o filme!</a>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\t<div class="row">\n\t\t<div class="col-md-12">\n\t\t\t<div class="page-header footer">\n\t\t\t\t<h1 class="footer_h1">\n\t\t\t\t\tMarvel Guide! <small>Um site para voc\xc3\xaa que gosta de ler quadrinhos, por\xc3\xa9m fica um pouco perdido em onde come\xc3\xa7ar a ler, iremos te ajudar a ter uma boa base para come\xc3\xa7ar a se aventurar nesse incr\xc3\xadvel universo MARVEL!</small>\n\t\t\t\t</h1>\n\t\t\t\t<hr/>\n\t\t\t\t<h1 class="footer_h1">\n\t\t\t\t\tPedro Henrique Silva Rosa\n\t\t\t\t</h1>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n    <script type="text/javascript">\n    \tinit_index();\n    </script>\n\n  </body>\n</html>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.IOError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.IOError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.IOError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'__sizeof__'
+p20
+S'<built-in method __sizeof__ of exceptions.IOError object>'
+p21
+sS'__init__'
+p22
+S"<method-wrapper '__init__' of exceptions.IOError object>"
+p23
+sS'__setattr__'
+p24
+S"<method-wrapper '__setattr__' of exceptions.IOError object>"
+p25
+sS'__reduce_ex__'
+p26
+S'<built-in method __reduce_ex__ of exceptions.IOError object>'
+p27
+sS'__new__'
+p28
+S'<built-in method __new__ of type object>'
+p29
+sS'errno'
+p30
+S'2'
+sS'__format__'
+p31
+S'<built-in method __format__ of exceptions.IOError object>'
+p32
+sS'__class__'
+p33
+S"<type 'exceptions.IOError'>"
+p34
+sS'filename'
+p35
+S"'/home/pedro/web2py/applications/marvel_guide/views/application/menu.html'"
+p36
+sS'__doc__'
+p37
+S"'I/O operation failed.'"
+p38
+sS'__getitem__'
+p39
+S"<method-wrapper '__getitem__' of exceptions.IOError object>"
+p40
+sS'__setstate__'
+p41
+S'<built-in method __setstate__ of exceptions.IOError object>'
+p42
+sS'__getattribute__'
+p43
+S"<method-wrapper '__getattribute__' of exceptions.IOError object>"
+p44
+sS'args'
+p45
+S"(2, 'No such file or directory')"
+p46
+sS'__subclasshook__'
+p47
+S'<built-in method __subclasshook__ of type object>'
+p48
+sS'__unicode__'
+p49
+S'<built-in method __unicode__ of exceptions.IOError object>'
+p50
+sS'strerror'
+p51
+S"'No such file or directory'"
+p52
+sS'__delattr__'
+p53
+S"<method-wrapper '__delattr__' of exceptions.IOError object>"
+p54
+sS'__repr__'
+p55
+S"<method-wrapper '__repr__' of exceptions.IOError object>"
+p56
+sS'__hash__'
+p57
+S"<method-wrapper '__hash__' of exceptions.IOError object>"
+p58
+ssS'evalue'
+p59
+S"[Errno 2] No such file or directory: '/home/pedro/web2py/applications/marvel_guide/views/application/menu.html'"
+p60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'/home/pedro/web2py/gluon/template.py'
+p65
+sS'dump'
+p66
+(dp67
+S'builtinopen'
+p68
+S'<built-in function open>'
+p69
+sS'fileobj'
+p70
+S'undefined'
+p71
+sS'filepath'
+p72
+S"'/home/pedro/web2py/applications/marvel_guide/views/application/menu.html'"
+p73
+ssS'lnum'
+p74
+I450
+sS'lines'
+p75
+(dp76
+I448
+S'        # try to read the text.'
+p77
+sI449
+S'        try:'
+p78
+sI450
+S"            fileobj = open(filepath, 'rb')"
+p79
+sI451
+S'            text = fileobj.read()'
+p80
+sI452
+S'            fileobj.close()'
+p81
+sI453
+S'        except IOError:'
+p82
+sI454
+S"            self._raise_error('Unable to open included view file: ' + filepath)"
+p83
+sI445
+S'        # Get the path of the file on the system.'
+p84
+sI446
+S'        filepath = self.path and os.path.join(self.path, filename) or filename'
+p85
+sI447
+S''
+ssS'call'
+p86
+S"(self=<gluon.template.TemplateParser object>, filename='application/menu.html')"
+p87
+sS'func'
+p88
+S'_get_file_text'
+p89
+sasS'pyver'
+p90
+S'Python 2.7.6: /usr/bin/python (prefix: /usr)'
+p91
+sS'etype'
+p92
+S"<type 'exceptions.IOError'>"
+p93
+sS'date'
+p94
+S'Thu Apr 14 07:32:36 2016'
+p95
+sS'locals'
+p96
+(dp97
+S'self'
+p98
+S'<gluon.template.TemplateParser object>'
+p99
+sg35
+S"'application/menu.html'"
+p100
+sS'context'
+p101
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'ASSIGNJS': <function ASSIGNJS>, 'AppConfig': <function AppConfig>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, ...}"
+p102
+sS'filepath'
+p103
+S"'/home/pedro/web2py/applications/marvel_guide/views/application/menu.html'"
+p104
+sssS'traceback'
+p105
+S'Traceback (most recent call last):\n  File "/home/pedro/web2py/gluon/template.py", line 450, in _get_file_text\n    fileobj = open(filepath, \'rb\')\nIOError: [Errno 2] No such file or directory: \'/home/pedro/web2py/applications/marvel_guide/views/application/menu.html\'\n'
+p106
+s.

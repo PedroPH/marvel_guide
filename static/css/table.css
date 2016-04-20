@@ -1,0 +1,118 @@
+.div_form_right {
+	max-height: 2000px;
+	overflow: auto;
+}
+
+.td_insert {
+	padding-top: 15px;
+}
+
+.td_insert_left {
+	width: 200px;
+}
+
+.td_insert_right {
+	width: 400px;
+}
+
+.table_itens {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.table_form_fill {
+	width: 100%;
+}
+
+/* ITENS TABLE */
+.table_itens {
+}
+
+.item_table {
+	border: 0px solid white;
+	box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.6);
+}
+
+.tr_itens {
+}
+
+.td_itens {
+	min-width: 170px;
+	max-width: 170px;
+	padding: 10px;
+}
+
+.item_title {
+	width: 130px;
+	background-color: #B9B9B9;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	padding: 0px 5px 0px 5px;
+}
+
+.item_edit {
+	width: 20px;
+	background-color: #B9B9B9;
+	cursor: pointer;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+}
+
+.item_delete {
+	width: 20px;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.item_desc {
+	width: 170px;
+	max-width: 170px;
+	height: 150px;
+	max-height: 150px;
+	background-color: white;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.div_desc {
+	width: 170px;
+	max-width: 170px;
+	height: 150px;
+	max-height: 150px;
+	overflow: auto;
+	text-align: justify;
+	padding: 0px 5px 0px 5px;
+}
+
+.item_char {
+	width: 170px;
+	max-width: 170px;
+	height: 70px;
+	max-height: 70px;
+	background-color: white;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.div_char {
+	width: 170px;
+	max-width: 170px;
+	height: 70px;
+	max-height: 70px;
+	overflow: auto;
+	text-align: justify;
+	padding: 0px 5px 0px 5px;
+}
+
+.item_year {
+	width: 170px;
+	background-color: #B9B9B9;
+	border: 2px solid black;
+	padding: 0px 5px 0px 5px;
+}

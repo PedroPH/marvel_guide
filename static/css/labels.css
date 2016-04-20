@@ -1,0 +1,49 @@
+.table_form {
+	width: 100%;
+	margin: auto auto;
+}
+
+.label_span {
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+.img_preview {
+	width: 200px;
+	border-radius: 25px;
+	padding: 10px;
+}
+
+.title {
+	text-shadow: 0 0 5px #000;
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+}
+
+.text_area {
+	resize: vertical;
+}
+
+.error_description {
+	color: red;
+}
+
+.inputs_size {
+	width: 300px;
+}
+
+.inputs_size_text_area {
+	width: 500px;
+	min-height: 150px;
+}
+
+.btn_save {
+	width: 150px;
+}
+
+.btn_cancel {
+	width: 150px;
+	display: none;
+}

@@ -1,0 +1,109 @@
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MARVEL Guide</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index_admin.js"></script>
+    <script src="js/insert_character.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/news.css" rel="stylesheet">
+    <link href="css/labels.css" rel="stylesheet">
+
+  </head>
+  <body style="background-image: url('img/back.jpg')">
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" id="menu">
+			<!-- MENU -->
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 news_title">
+			<span class="title">Inserir Personagem</span>
+		</div>
+	</div>
+	<div class="border_radius css_news">
+		<div id="error"></div>
+		<form role="form">
+			<table class="table_form">
+				<tr>
+					<td align="left">
+						<span class="label_span">Nome do Personagem</span>
+					</td>
+					<td rowspan="7"><img id="img_preview" class="item_img img_preview" alt="Bootstrap Image Preview" src="img/cat/her/daredevil.png" /></td>
+				</tr>
+				<tr>
+					<td>
+						<input id="name" type="text" class="form-control" data-toggle="validator" />
+					</td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td align="left">
+						<span class="label_span">Categoria</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<select id="sel_cat" class="form-control">
+							<option value="">Her&oacute;i</option>
+							<option value="">Vil&atilde;o</option>
+							<option value="">Anti-Her&oacute;i</option>
+						</select>
+					</td>
+				</tr>
+				<tr><td>&nbsp;</td></tr>
+				<tr>
+					<td align="left">
+						<span class="label_span">Imagem</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="file" id="img_upload" onchange="previewImage(this);" />
+					</td>
+				</tr>
+				<tr><td colspan="2"><hr/></td></tr>
+				<tr>
+					<td colspan="2">
+						<input type="button" class="btn btn-success" onclick="submitCharacter();" value="Salvar" />
+					</td>
+				</tr>
+			</table>
+		</form>
+		<hr/>
+		<div id="table_characters"></div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header footer">
+				<h1 class="footer_h1">
+					Marvel Guide! <small>Um site para você que gosta de ler quadrinhos, porém fica um pouco perdido em onde começar a ler, iremos te ajudar a ter uma boa base para começar a se aventurar nesse incrível universo MARVEL!</small>
+				</h1>
+				<hr/>
+				<h1 class="footer_h1">
+					Pedro Henrique Silva Rosa
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script type="text/javascript">
+    	init_index();
+    </script>
+
+  </body>
+</html>

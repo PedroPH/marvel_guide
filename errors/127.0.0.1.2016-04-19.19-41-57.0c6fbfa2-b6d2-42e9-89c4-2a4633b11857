@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S'<class \'gluon.contrib.pg8000.ProgrammingError\'> (\'ERROR\', \'42P01\', \'relation "marvel_characters" does not exist\')'
+p3
+sS'layer'
+p4
+S'/home/pedro/web2py/applications/marvel_guide/controllers/admin.py'
+p5
+sS'code'
+p6
+S'# -*- coding: utf-8 -*-\n# this file is released under public domain and you can use without limitations\n\n#########################################################################\n## This is a sample controller\n## - index is the default action of any application\n## - user is required for authentication and authorization\n## - download is for downloading files uploaded in the db (does streaming)\n#########################################################################\n\ndef index_admin():\n    """\n    example action using the internationalization operator T and flash\n    rendered by views/default/index.html or views/generic.html\n\n    if you need a simple wiki simply replace the two lines below with:\n    return auth.wiki()\n    """\n    x = 0\n    response.flash = T("Hello World")\n    return dict(message=T(\'Welcome to web2py!\'))\n\ndef insert_hq():\n    characters = db.executesql("SELECT id, char_name, created, char_image, char_type FROM marvel_characters",as_dict=True)\n    response.flash = T("Hello World")\n    return dict(characters = characters)\nresponse._vars=response._caller(insert_hq)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pedro/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/admin.py", line 27, in <module>\n  File "/home/pedro/web2py/gluon/globals.py", line 412, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/admin.py", line 24, in insert_hq\n    characters = db.executesql("SELECT id, char_name, created, char_image, char_type FROM marvel_characters",as_dict=True)\n  File "/home/pedro/web2py/gluon/packages/dal/pydal/base.py", line 1000, in executesql\n    adapter.execute(query)\n  File "/home/pedro/web2py/gluon/packages/dal/pydal/adapters/base.py", line 1350, in execute\n    return self.log_execute(*a, **b)\n  File "/home/pedro/web2py/gluon/packages/dal/pydal/adapters/base.py", line 1344, in log_execute\n    ret = self.cursor.execute(command, *a[1:], **b)\n  File "/home/pedro/web2py/gluon/contrib/pg8000/core.py", line 573, in execute\n    self._c.execute(self, operation, args)\n  File "/home/pedro/web2py/gluon/contrib/pg8000/core.py", line 1626, in execute\n    self.handle_messages(cursor)\n  File "/home/pedro/web2py/gluon/contrib/pg8000/core.py", line 1774, in handle_messages\n    raise self.error\nProgrammingError: (\'ERROR\', \'42P01\', \'relation "marvel_characters" does not exist\')\n'
+p11
+s.

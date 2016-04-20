@@ -1,0 +1,91 @@
+timestamp: 2016-04-18T10:15:25.670884
+CREATE TABLE auth_user(
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(128),
+    last_name VARCHAR(128),
+    email VARCHAR(512),
+    password VARCHAR(512),
+    registration_key VARCHAR(512),
+    reset_password_key VARCHAR(512),
+    registration_id VARCHAR(512)
+);
+faked!
+timestamp: 2016-04-18T10:15:25.673415
+CREATE TABLE auth_group(
+    id SERIAL PRIMARY KEY,
+    role VARCHAR(512),
+    description TEXT
+);
+faked!
+timestamp: 2016-04-18T10:15:25.678725
+CREATE TABLE auth_membership(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+faked!
+timestamp: 2016-04-18T10:15:25.682272
+CREATE TABLE auth_permission(
+    id SERIAL PRIMARY KEY,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name VARCHAR(512),
+    table_name VARCHAR(512),
+    record_id INTEGER
+);
+faked!
+timestamp: 2016-04-18T10:15:25.685288
+CREATE TABLE auth_event(
+    id SERIAL PRIMARY KEY,
+    time_stamp TIMESTAMP,
+    client_ip VARCHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin VARCHAR(512),
+    description TEXT
+);
+faked!
+timestamp: 2016-04-18T10:15:25.687749
+CREATE TABLE auth_cas(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service VARCHAR(512),
+    ticket VARCHAR(512),
+    renew CHAR(1)
+);
+faked!
+timestamp: 2016-04-18T10:15:40.738659
+CREATE TABLE marvel_character(
+    id SERIAL PRIMARY KEY,
+    char_name VARCHAR(128) UNIQUE,
+    created TIMESTAMP,
+    char_image VARCHAR(512),
+    char_type INTEGER
+);
+success!
+timestamp: 2016-04-18T10:15:40.885761
+CREATE TABLE hq(
+    id SERIAL PRIMARY KEY,
+    hq_title VARCHAR(128) UNIQUE,
+    created TIMESTAMP,
+    hq_image VARCHAR(512),
+    hq_year VARCHAR(4),
+    hq_description VARCHAR(500)
+);
+success!
+timestamp: 2016-04-19T20:19:00.954793
+CREATE TABLE hq_character(
+    id SERIAL PRIMARY KEY,
+    created TIMESTAMP,
+    marvel_character INTEGER REFERENCES marvel_character (id) ON DELETE CASCADE,
+    hq INTEGER REFERENCES hq (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2016-04-19T20:24:59.578713
+ALTER TABLE marvel_character ADD deleted CHAR(1);
+success!
+timestamp: 2016-04-19T20:24:59.637390
+ALTER TABLE hq ADD deleted CHAR(1);
+success!
+timestamp: 2016-04-19T20:24:59.727210
+ALTER TABLE hq_character ADD deleted CHAR(1);
+success!

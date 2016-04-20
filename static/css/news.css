@@ -1,0 +1,27 @@
+/*
+	------- NEWS -------
+*/
+.news_title {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.css_news {
+	border: 3px solid white;
+	background: radial-gradient(rgba(0, 0, 255, 0.7), rgba(0, 174, 255, 0.7));
+	padding: 20px;
+	text-align: center;
+	margin: 0px 30px 0px 30px;
+}
+
+.css_news_desc {
+	background-color: #FFFFFF;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+
+.row_news {
+	margin-bottom: 0px;
+	margin-top: 0px.
+}

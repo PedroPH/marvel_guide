@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.KeyError'> 0"
+p3
+sS'layer'
+p4
+S'/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py'
+p5
+sS'code'
+p6
+S'from serializers import json\n\ndef insert_hq():\n    data = {\'title\' : request.vars.hq_title,\n            \'description\' : request.vars.hq_description,\n            \'year\' : request.vars.hq_year,\n            \'characters\' : request.vars.hq_character}\n    query = """INSERT INTO hq (created, hq_title, hq_description, hq_year)\n                VALUES (\'{0}\', \'{1}\', \'{2}\', \'{3}\') RETURNING id""".format(request.now, data[0], data[1], data[2])\n    try:\n        id_hq = db.executesql(query);\n        id_hq = id_hq[0][\'id\']\n        for c in data[\'characters\']:\n            db.executesql("INSERT INTO hq_character (created, marvel_character, hq) VALUES (\'{0}\', {1}, {2})".format(request.now, c, id_hq))\n        ret = {\'hq\' : db.executesql(\'SELECT id, hq_title, hq_description, hq_year FROM hq WHERE id={0}\'.format(id_hq),as_dict=True),\n               \'hqs_characters\' : db.executesql("SELECT id, marvel_character, hq FROM hq_character WHERE deleted=\'F\'",as_dict=True)}\n        db.commit()\n    except Exception as wE:\n        ret = \'erro\'\n    return XML(json(ret))\nresponse._vars=response._caller(insert_hq)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/home/pedro/web2py/gluon/restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py", line 21, in <module>\n  File "/home/pedro/web2py/gluon/globals.py", line 412, in <lambda>\n    self._caller = lambda f: f()\n  File "/home/pedro/web2py/applications/marvel_guide/controllers/backcall.py", line 9, in insert_hq\n    VALUES (\'{0}\', \'{1}\', \'{2}\', \'{3}\') RETURNING id""".format(request.now, data[0], data[1], data[2])\nKeyError: 0\n'
+p11
+s.
