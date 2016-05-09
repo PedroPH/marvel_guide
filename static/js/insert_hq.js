@@ -42,7 +42,7 @@ function submit_insert_hq() {
 			enctype: 'multipart/form-data',
 			success:function(wRet){
 				ret = JSON.parse(wRet);
-				if (ret == 'error') expose_modal('Problema', '<p>Tente novamente mais tarde!</p>');
+				if (ret == 'erro') expose_modal('Problema', '<p>Tente novamente mais tarde!</p>');
 				else {
 					hqs = ret['hqs'];
 					hqs_chars = ret['hqs_characters'];
@@ -65,7 +65,7 @@ function delete_hq(wId) {
 		enctype: 'multipart/form-data',
 		success:function(wRet){
 			ret = JSON.parse(wRet);
-			if (ret == 'error') expose_modal('Problema', '<p>Tente novamente mais tarde!</p>');
+			if (ret == 'erro') expose_modal('Problema', '<p>Tente novamente mais tarde!</p>');
 			else {
 				hqs = ret['hqs'];
 				hqs_chars = ret['hqs_characters'];
@@ -81,6 +81,7 @@ function delete_hq(wId) {
 
 function fill_table_hq() {
 	$('#table_hqs').html(get_table_hq(hqs, chars, hqs_chars));
+	close_modal();
 }
 
 function edit_item(wId) {

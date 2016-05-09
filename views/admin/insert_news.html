@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html ng-app="listNews" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MARVEL Guide</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <script src="../static/js/angular.min.js"></script>
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="{{=URL('static/js','insert_news.js')}}"></script>
+    <script src="../static/js/index_admin.js"></script>
+    <script src="{{=URL('static/js','modal_info.js')}}"></script>
+    <script src="{{=URL('static/js','tables.js')}}"></script>
+    <script src="../static/js/input_mask.js"></script>
+    <script src="../static/js/format_fields.js"></script>
+    <script src="../static/js/validator.js"></script>
+    <script src="../static/js/bootstrap-select.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/common.css" rel="stylesheet">
+    <link href="../static/css/news.css" rel="stylesheet">
+    <link href="../static/css/labels.css" rel="stylesheet">
+    <link href="../static/css/table.css" rel="stylesheet">
+    <link href="../static/css/bootstrap-select.css" rel="stylesheet">
+
+    {{from serializers import json}}
+
+    <style type="text/css">
+    .sel {
+    	background-color: #6889BB;
+    	font-weight: bold;
+    }
+    </style>
+
+  </head>
+  <body style="background-image: url('../static/images/back.jpg')" ng-controller="newsControl">
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12" id="menu">
+			{{include 'admin/menu_admin.html'}}
+			{{include 'common/modal_info.html'}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 news_title">
+			<span class="title" ng-bind="title"></span>
+		</div>
+	</div>
+	<div class="border_radius css_news">
+		<div id="error"></div>
+			<form role="form">
+				<table class="table_form" style="width: 400px;">
+					<tr>
+						<td align="center" class="td_insert td_insert_left"><span class="label_span">T&iacute;tulo</span></td>
+						<td align="center" class="td_insert td_insert_right"><span class="label_span">Texto</span></td>
+					</tr>
+					<tr>
+						<td align="center">
+							<input id="title" ng-model="new_new.news_title" type="text" class="form-control inputs_size" />
+						</td>
+						<td rowspan="3" align="center" style="padding: 30px;"><textarea id="text" ng-model="new_new.news_text" id="hq_description" class="form-control text_area inputs_size_text_area"></textarea></td>
+					</tr>
+
+					<tr><td align="center" class="td_insert"><span class="label_span">Link</span></td></tr>
+					<tr>
+						<td align="center">
+							<input id="link" ng-model="new_new.news_url" type="text" class="form-control inputs_size" />
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="2" align="center" class="td_insert">
+							<input type="button" class="btn btn-success" ng-disabled="!(new_new.news_title.length > 4) ||
+																					  !(new_new.news_text.length > 4) ||
+																					  !(new_new.news_url.length > 4)" id="insert" ng-click="insertNews(new_new)" value="Salvar" />
+							<input type="button" class="btn btn-warning" id="cancel" ng-hide="insert == 'true'" ng-click="cancelEdit()" value="Cancelar" />
+							<input type="button" class="btn btn-danger" id="remove" ng-hide="" ng-click="removeNews(news)" value="Apagar" />
+						</td>
+					</tr>
+				</table>
+			</form>
+			<br/>
+			<span class="title"></span>
+			<div class="div_form_right" id="table_news" align="left">
+				<span style="color: white">{!!}</span>
+				<table class="table">
+					<tr>
+						<th></th>
+						<th style="text-align: center; color: white">Not&iacute;cia</th>
+						<th style="text-align: center; color: white">Texto</th>
+						<th style="text-align: center; color: white">Link</th>
+						<th colspan="2" style="text-align: center; color: white;">A&ccedil;&otilde;es</th>
+					</tr>
+					<tr ng-class="{sel: new.sel}" ng-repeat="new in news">
+						<td align="center" style="width: 30px;"><input type="checkbox" ng-model="new.sel"></input></td>
+						<td align="center" style="color: white">{!new.news_title.substring(0, 30)!}</td>
+						<td align="center" style="color: white">{!new.news_text.substring(0, 30)!}</td>
+						<td align="center" style="color: white">{!new.news_url.substring(0, 30)!}</td>
+						<td align="center" style="color: white; width: 70px;">
+							<button ng-click="editNew(new.id, news)" style="widows: 60px; height: 30px; padding: 5px;" class="btn btn-default">Editar</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header footer">
+				<h1 class="footer_h1">
+					Marvel Guide! <small>Um site para você que gosta de ler quadrinhos, porém fica um pouco perdido em onde começar a ler, iremos te ajudar a ter uma boa base para começar a se aventurar nesse incrível universo MARVEL!</small>
+				</h1>
+				<hr/>
+				<h1 class="footer_h1">
+					Pedro Henrique Silva Rosa
+				</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+  </body>
+</html>

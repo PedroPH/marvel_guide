@@ -26,3 +26,6 @@ def insert_hq():
     hqs_characters = db.executesql("SELECT id, marvel_character, hq FROM hq_character WHERE deleted='F'",as_dict=True)
     response.flash = T("Hello World")
     return dict(characters=characters,hqs=hqs,hqs_characters=hqs_characters)
+
+def insert_news():
+    return dict()

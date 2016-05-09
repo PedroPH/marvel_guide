@@ -18,8 +18,8 @@ myconf = AppConfig(reload=True)
 
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
-    db = DAL('postgres://postgres:aq1sw2DE#FR$@localhost/marvel_guide',pool_size=5,check_reserved=['all'],
-                    fake_migrate=True)
+    db = DAL('postgres://postgres:pedrosql@localhost/marvel_guide',pool_size=5,check_reserved=['all'],
+                    migrate=True)
 else:
     ## connect to Google BigTable (optional 'google:datastore://namespace')
     db = DAL('google:datastore+ndb')
@@ -94,14 +94,14 @@ auth.settings.reset_password_requires_verification = True
 # auth.enable_record_versioning(db)
 
 db.define_table('marvel_character',
-    Field('char_name',requires=IS_NOT_EMPTY(),unique=True,length=128,label='Nome'),
+    Field('char_name',requires=IS_NOT_EMPTY(),length=128,label='Nome'),
     Field('created','datetime',label='Criado',default=datetime.now()),
     Field('char_image',type='upload',uploadfolder='applications/transit/uploads/province/',label='Imagem'),
     Field('char_type','integer',requires=IS_NOT_EMPTY(),label='Tipo do Personagem'),
     Field('deleted','boolean',label='Deleção Lógica',default='F'))
 
 db.define_table('hq',
-    Field('hq_title',requires=IS_NOT_EMPTY(),unique=True,length=128,label='Nome'),
+    Field('hq_title',requires=IS_NOT_EMPTY(),length=128,label='Nome'),
     Field('created','datetime',label='Criado',default=datetime.now()),
     Field('hq_image',type='upload',uploadfolder='applications/transit/uploads/province/',label='Imagem'),
     Field('hq_year',length=4,requires=IS_NOT_EMPTY(),label='Ano'),
@@ -118,3 +118,13 @@ db.define_table('hq_character',
 
 db.hq_character.marvel_character.requires = IS_IN_DB(db,'marvel_character.id','%(char_name)s',zero=T('Selecione'))
 db.hq_character.hq.requires = IS_IN_DB(db,'hq.id','%(hq_title)s',zero=T('Selecione'))
+
+db.define_table('news',
+    Field('news_title',requires=IS_NOT_EMPTY(),length=128,label='Título'),
+    Field('created','datetime',label='Criado',default=datetime.now()),
+    Field('news_image1',type='upload',uploadfolder='applications/transit/uploads/province/',label='Imagem 1'),
+    Field('news_image2',type='upload',uploadfolder='applications/transit/uploads/province/',label='Imagem 2'),
+    Field('news_image3',type='upload',uploadfolder='applications/transit/uploads/province/',label='Imagem 3'),
+    Field('news_text',length=500,requires=IS_NOT_EMPTY(),label='Texto'),
+    Field('news_url',length=500,label='Url'),
+    Field('deleted','boolean',label='Deleção Lógica',default='F'))
