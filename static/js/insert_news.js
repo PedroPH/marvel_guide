@@ -1,7 +1,7 @@
 var test = [];
 angular.module("listNews", []);
 angular.module("listNews").controller("newsControl", function ($scope) {
-	$scope.title = "Lista de Notícias";
+	$scope.title = "Gerenciar Notícias";
 	$scope.news = [];
 	$scope.insert = 'true';
 	var getNews = function () {
@@ -13,7 +13,6 @@ angular.module("listNews").controller("newsControl", function ($scope) {
 			success:function(wRet){
 				var ret = JSON.parse(wRet);
 				$scope.news = ret;
-				console.log($scope.news);
 			},
 			error: function (error) {
 				return error;
@@ -33,6 +32,7 @@ angular.module("listNews").controller("newsControl", function ($scope) {
 				return error;
 			}
 		});
+		$scope.insert = 'true';
 		delete $scope.new_new;
 	};
 	$scope.removeNews = function (news) {
